@@ -53,7 +53,7 @@ git push
 RESET - Think of it as a "rollback" / to the preveous commit
 REVERT - Identical in a way of work but the approach is different / In simple language when we use this it adds one commit on top with changes of the desired commit like keeping the old code with a new commit
 
-git reset --soft <commit-id>   	# keep changes staged
+git reset --soft <commit-id>   	# keep changes staged / Only modify the commit history not the actual change
 git reset --mixed <commit-id>  	# keep changes unstaged (default)
 git reset --hard <commit-id>   	# delete all changes permanently
 git revert <commit-id>		# Creates a new commit that undoes changes of a previous commit
