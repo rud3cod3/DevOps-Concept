@@ -17,4 +17,47 @@ git diff				# will let you see the difference
 git log					# shows last 10 logs
 git log --oneline			# logs in oneline
 git log --author="rud3cod3"		# see logs with author / who pushed which commit / WE CAN ALSO USE EMAIL ID INSTEAD OF USERNAME
+git log --stat                		# shows files changed per commit
+git log -p                    		# shows code changes per commit
+git show <commit-id>          		# show details of one commit
 
+## Git branch related commands
+
+When we create a branch in local we have to push it in order to work with it 
+
+git branch                   	# show branches
+git branch useme              	# create branch
+git switch useme              	# move to the branch
+git push -u origin useme      	# push branch to GitHub and set upstream tracking
+git switch main               	# go back to main
+
+
+## Git Merge
+
+# Merging two branches
+# Switch to the branch where you want to merge the code and take pull first
+
+git switch main			# switch to main branch
+git pull main			# pulling the changes if any
+git merge useme			# useme branch will be merged into our main branch 
+
+Then
+
+git add .
+git status
+git commit
+git push	
+
+## Reverting the code 
+
+RESET - Think of it as a "rollback" / to the preveous commit
+REVERT - Identical in a way of work but the approach is different / In simple language when we use this it adds one commit on top with changes of the desired commit like keeping the old code with a new commit
+
+git reset --soft <commit-id>   	# keep changes staged
+git reset --mixed <commit-id>  	# keep changes unstaged (default)
+git reset --hard <commit-id>   	# delete all changes permanently
+git revert <commit-id>		# Creates a new commit that undoes changes of a previous commit
+
+If user have already pushed commits to remote repo a REVERT is a nicer way to cancel out changes
+Reser is a good option when we are working on local setup
+ 
