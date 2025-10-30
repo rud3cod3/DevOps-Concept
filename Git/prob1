@@ -1,6 +1,7 @@
 ## So i was working with the commits and i accidentlly removed the changes now there is still one way even if you use hard reset 
 
-git reflog					# this records every movement of HEAD, including before your reset
-git checkout -b recovery-branch 8a8f6bb		# Create a new branch pointing to that lost commit
-
-
+git reflog                                       # find your lost commit hash
+git checkout -b recovery-branch 8a8f6bb          # create a new branch from that commit
+git switch main                                  # switch to main branch
+git merge recovery-branch                        # merge the lost changes back into main
+git branch -d recovery-branch                    # delete the temporary recovery branch
