@@ -12,6 +12,10 @@ git status				# check files status
 git commit -m "message here" 		# with the commit add msg for the future reference
 git diff				# will let you see the difference
 
+# Suppose you modified one file now you want to know what changes has been made 
+git diff filename			# let you see the changes which are made
+
+
 ## Git tracking and git logs
 
 git log					# shows last 10 logs
@@ -60,4 +64,7 @@ git revert <commit-id>		# Creates a new commit that undoes changes of a previous
 
 If user have already pushed commits to remote repo a REVERT is a nicer way to cancel out changes
 Reset is a good option when we are working on local setup
+
+# Compare working directory and Staging area
+
  
