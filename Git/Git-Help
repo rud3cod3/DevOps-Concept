@@ -6,20 +6,23 @@ git config --list						# list information
 
 ## Other General git commands
 
-git init				# initialize git repo
-git add . 				# add all file for staging / we can also add specific file
-git status				# check files status
-git commit -m "message here" 		# with the commit add msg for the future reference
-git diff				# will let you see the difference
+git init					# initialize git repo
+git add . 					# add all file for staging / we can also add specific file
+git status					# check files status
+git commit -m "message here" 			# with the commit add msg for the future reference
+git commit -am "all the pending commmits"	# add and commit at the same time
+git diff					# will let you see the difference
 
 # Suppose you modified one file now you want to know what changes has been made 
-git diff filename			# let you see the changes which are made
+git diff filename			# let you see the changes which are made (don't commit if you are practising)
 
+# Inshort if specified a file which is not commited this diff command will show you the changes which are done to that particular file and if we use git diff it wil show all the file changes which are made
 
 ## Git tracking and git logs
 
 git log					# shows last 10 logs
 git log --oneline			# logs in oneline
+git log --oneline --graph		# shows a graph of things which were merged
 git log --author="rud3cod3"		# see logs with author / who pushed which commit / WE CAN ALSO USE EMAIL ID INSTEAD OF USERNAME
 git log --stat                		# shows files changed per commit
 git log -p                    		# shows code changes per commit
@@ -29,12 +32,13 @@ git show <commit-id>          		# show details of one commit
 
 When we create a branch in local we have to push it in order to work with it 
 
-git branch                   	# show branches
-git branch useme              	# create branch
-git switch useme              	# move to the branch
-git push -u origin useme      	# push branch to GitHub and set upstream tracking
-git switch main               	# go back to main
-
+git branch                   		# show branches
+git branch -a 				# list all the branches
+git branch -m old-name new-name		# rename branch
+git branch useme              		# create branch
+git switch useme              		# move to the branch
+git push -u origin useme      		# push branch to GitHub and set upstream tracking
+git switch main               		# go back to main
 
 ## Git Merge
 
@@ -44,6 +48,7 @@ git switch main               	# go back to main
 git switch main			# switch to main branch
 git pull main			# pulling the changes if any
 git merge useme			# useme branch will be merged into our main branch 
+git merge useme -m "msg"	# merge commit helpfull while troubleshooting
 
 Then
 
@@ -67,4 +72,11 @@ Reset is a good option when we are working on local setup
 
 # Compare working directory and Staging area
 
- 
+we are here talking about { git diff }
+git diff commit1 commit2	# show what changes are done between this two commits (all the changes)
+
+# stashing 
+
+git stash list			# to see list of stashed changes
+git stash apply			# applying stashed changes
+  
