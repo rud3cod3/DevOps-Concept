@@ -1,0 +1,20 @@
+## Configure user information in git
+
+git config --global user.name "rud3cod3"			# for username
+git config --global user.email "devops6722@gmail.com"		# for email
+git config --list						# list information
+
+## Other General git commands
+
+git init				# initialize git repo
+git add . 				# add all file for staging / we can also add specific file
+git status				# check files status
+git commit -m "message here" 		# with the commit add msg for the future reference
+git diff				# will let you see the difference
+
+## Git tracking and git logs
+
+git log					# shows last 10 logs
+git log --oneline			# logs in oneline
+git log --author="rud3cod3"		# see logs with author / who pushed which commit / WE CAN ALSO USE EMAIL ID INSTEAD OF USERNAME
+
