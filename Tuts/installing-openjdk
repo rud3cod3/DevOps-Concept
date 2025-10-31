@@ -1,0 +1,6 @@
+## We first started with jenkins and in order to run jenkins we need openjdk version 17 least
+
+## Installation Guide (Ubuntu aws)
+
+java --version
+sudo apt install openjdk-17-jre-headless

@@ -75,8 +75,24 @@ Reset is a good option when we are working on local setup
 we are here talking about { git diff }
 git diff commit1 commit2	# show what changes are done between this two commits (all the changes)
 
-# stashing 
+## stashing 
 
 git stash list			# to see list of stashed changes
 git stash apply			# applying stashed changes
-  
+git stash drop 			# droping stashed changes (must do else it will stay there)
+
+# In git there are two type of file Untracked and Tracked 
+# Untracked means files which are not commited and Tracked means the files which are already commited
+# Bydefault we cannot Track unstashed file but if it is a requirement we can do somethings which are
+
+git stash -a 			# it will also stash all the files tracked / Untracked
+git stash pop			# to pop stashed file
+
+# stash apply will keep the data in list even after we apply stash but the git pop will pop it
+
+## Multi stash
+
+git stash save "message"	# stash with message only work with tagged files
+git stash show stash@{index}	# find changes done in specific stash work only with tracked files  
+git stash apply stash@{index}	# apply specific stash
+git stash pop stash@{index}	# pop with index
